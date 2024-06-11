@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>UpperPro</title>
+  <style>
+    form h1{
+      color: #58befa;
+      padding: 3%;
+    }
+    .custom-container {
+      width: 100000px;
+      margin: 0 auto;
+      margin-bottom: 3%;
+    }
+
+    .form-control:focus {
+      border-color: #58befa;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    .form-select:focus {
+      border-color: #58befa;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  </style>
+  <link rel="stylesheet" href="../styleHeader.css">
+</head>
+
+<body>
+  <header>
+    <img src="../img/logo.png" alt="logo">
+    <nav>
+      <div class="dropdown">
+        <button class="dropbtn">Cadastros</button>
+        <div class="dropdown-content">
+          <a class="dropdown-start" href="../Cadastro_Cliente/clientes.html">Cliente e Fornecedor</a>
+          <a class="dropdown-end" href="../Tela_produto/Produto.html">Produto</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Suprimentos</button>
+        <div class="dropdown-content">
+          <a class="dropdown-start" href="#">Pedidos de Compra</a>
+          <a class="dropdown-meio" href="#">Estoque</a>
+          <a class="dropdown-end" href="#">Relatorio</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Vendas</button>
+        <div class="dropdown-content">
+          <a class="dropdown-start" href="#">Pedidos de Compra</a>
+          <a class="dropdown-meio" href="#">Frente de Caixa</a>
+          <a class="dropdown-end" href="#">Relatorio</a>
+        </div>
+      </div>
+    </nav>
+    <div>
+      <button>Botão 1</button>
+      <button>Botão 2</button>
+    </div>
+  </header>
+  <main>
+    <form>
+      <h1><strong>Cliente ou Fornecedor</strong></h1>
+      <div class="container custom-container ">
+        <h3><strong>Dados Cadastrais</strong></h3>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome">
+          </div>
+          <div class="col-md-6">
+            <label for="nomeFantasia" class="form-label">Nome Fantasia</label>
+            <input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="tipoPessoa" class="form-label">Tipo de Pessoa</label>
+            <select class="form-select" id="tipoPessoa" name="tipoPessoa" onchange="toggleFields()">
+              <option value="fisica">Física</option>
+              <option value="juridica">Jurídica</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="cpfCnpj" class="form-label" id="cpfCnpjLabel">CPF</label>
+            <input type="text" class="form-control" id="cpfCnpj" name="cpfCnpj" placeholder="Digite o CPF">
+          </div>
+        </div>
+        <div class="row" id="regimeTributarioDiv" style="display: none;">
+          <div class="col-md-6">
+            <label for="regimeTributario" class="form-label">Código de Regime Tributário</label>
+            <select class="form-select" id="regimeTributario" name="regimeTributario">
+              <option value="naoDefinido">Não Definido</option>
+              <option value="simplesNacional">Simples Nacional</option>
+              <option value="regimeNormal">Regime Normal</option>
+            </select>
+          </div>
+        </div>
+        <div class="row" id="inscricaoEstadualDiv">
+          <div class="col-md-6">
+            <label for="inscricaoEstadual" class="form-label">Inscrição Estadual</label>
+            <input type="text" class="form-control" id="inscricaoEstadual" name="inscricaoEstadual">
+          </div>
+          <div class="col-md-6" id="ieIsentoDiv">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="ieIsentoCheckbox">
+              <label class="form-check-label" for="ieIsentoCheckbox">
+                IE Isento
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container custom-container">
+        <h3><strong>Endereço</strong></h3>
+        <div class="row">
+          <div class="col-md-7">
+            <label for="nome" class="form-label">Rua</label>
+            <input type="text" class="form-control" id="nome" name="nome">
+          </div>
+          <div class="col-md-4">
+            <label for="nome" class="form-label">Bairro</label>
+            <input type="text" class="form-control" id="nome" name="nome">
+          </div>
+          <div class="col-md-1">
+            <label for="nome" class="form-label">Número</label>
+            <input type="text" class="form-control" id="nome" name="nome">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <label for="nome" class="form-label">Cidade</label>
+            <input type="text" class="form-control" id="nome" name="nome">
+          </div>
+          <div class="col-md-1">
+            <label for="nome" class="form-label">UF</label>
+            <input type="text" class="form-control" id="nome" name="nome">
+          </div>
+          <div class="col-md-2">
+            <label for="nome" class="form-label">CEP</label>
+            <input type="text" class="form-control" id="nome" name="nome">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-">
+            <label for="nome" class="form-label">Complemento</label>
+            <input type="text" class="form-control" id="nome" name="nome">
+          </div>
+        </div>
+      </div>
+      <div class="container custom-container">
+        <h3><strong>Contato</strong></h3>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="nome" class="form-label">Nome do Contato</label>
+            <input type="text" class="form-control" id="nome" name="nome">
+          </div>
+          <div class="col-md-3">
+            <label for="nome" class="form-label">Fone</label>
+            <input type="text" class="form-control" id="nome" name="nome">
+          </div>
+          <div class="col-md-3">
+            <label for="nome" class="form-label">Celular</label>
+            <input type="text" class="form-control" id="nome" name="nome">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="nome" class="form-label">E-mail</label>
+            <input type="text" class="form-control" id="nome" name="nome">
+          </div>
+          <div class="col-md-6">
+            <label for="nome" class="form-label">E-mail Para Envio da NFe</label>
+            <input type="text" class="form-control" id="nome" name="nome">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <label for="nome" class="form-label">WebSite</label>
+            <input type="text" class="form-control" id="nome" name="nome">
+          </div>
+        </div>
+      </div>
+    </form>
+  </main>
+  <script type="text/javascript" src="script_cliente.js"></script>
+</body>
+
+</html>

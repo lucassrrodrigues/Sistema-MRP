@@ -1,0 +1,41 @@
+
+/* Rodapé */
+footer {
+    background-color: #58BEFA; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer {
+    background-color: #58BEFA; /* Cor de fundo azul */
+    padding: 10px; /* Espaçamento interno */
+}
+
+.rodape {
+    display: flex; /* Alinha os ícones em uma linha */
+    justify-content: center; 
+}
+
+.rodape a {
+    margin: 0 5px; /* Espaçamento negativo para sobrepor o fundo azul */
+    background-color: #58BEFA; /* Cor de fundo azul */
+    padding: 5px; /* Espaçamento interno */
+    border-radius: 50%; /* Borda arredondada para criar um efeito de botão */
+}
+
+.rodape img {
+    width: 35px; /* Tamanho dos ícones */
+    height: 35px;
+}
+
+.info {
+    text-align: center; /* Centraliza o texto */
+    color: white; /* Cor do texto */
+    font: Montserrat; 
+}
+
+.info div {
+    margin: 5px 0; /* Adiciona espaçamento entre os elementos */
+}
+

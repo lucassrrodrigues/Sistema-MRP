@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UpperPro</title>
+  <link rel="stylesheet" href="css_cad_venda.css">
+  <link rel="stylesheet" href="../styleHeader.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <style>
+    .no-gutters {
+      display: flex;
+      align-items: center;
+      gap: 0px;
+    }
+
+    .no-gutters>.col,
+    .no-gutters>[class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    .no-gutters .btn{
+      margin-top: 24px;
+      margin-left: 20px;
+    }
+    .btn-adicionar{
+      background-color: #58bffa00;
+      border: 0;
+      padding: 5px;
+      border-radius: 6%;
+      color: #58befa;
+      margin-left: 89%;
+    }
+    h1{
+      color: #58befa;
+      padding: 3%;
+    }
+    .custom-container {
+      width: 100000px;
+      margin: 0 auto;
+      margin-bottom: 3%;
+    }
+
+    .form-control:focus {
+      border-color: #58befa;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    .form-select:focus {
+      border-color: #58befa;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="logo.png" alt="logo">
+    <nav>
+      <div class="dropdown">
+        <button class="dropbtn">Cadastros</button>
+        <div class="dropdown-content">
+          <a class="dropdown-start" href="#">Cliente e Fornecedor</a>
+          <a class="dropdown-end" href="#">Produto</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Suprimentos</button>
+        <div class="dropdown-content">
+          <a class="dropdown-start" href="#">Pedidos de Compra</a>
+          <a class="dropdown-meio" href="#">Estoque</a>
+          <a class="dropdown-end" href="#">Relatorio</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Vendas</button>
+        <div class="dropdown-content">
+          <a class="dropdown-start" href="#">Pedidos de Compra</a>
+          <a class="dropdown-meio" href="#">Frente de Caixa</a>
+          <a class="dropdown-end" href="#">Relatorio</a>
+        </div>
+      </div>
+    </nav>
+    <div>
+      <button><img class="perfil" src="perfil.png" alt="Descrição da Imagem 1"></button>
+      <button><img class="perfil" src="sair.png" alt="Descrição da Imagem 2"></button>
+    </div>
+  </header>
+  <div>
+    <h1><strong>Pedidos de Venda</strong></h1>
+  </div>
+  <form id="forml" action="">
+    <div class="container custom-container ">
+      <div class="row">
+        <div class="col-md-3">
+          <label for="num_ped">N° do Pedido</label>
+          <input class="form-control"  name="num_ped" type="text" id="num_ped" size="20">
+        </div>
+      </div>
+    </div>
+    <div class="container custom-container ">
+      <h3><strong>Dados do cliente</strong></h3>
+      <div class="row g-3">
+        <div class="col-md-3">
+          <label for="cliente">Cliente</label>
+          <input class="form-control" name="cliente" type="text" id="cliente" size="20">
+        </div>
+        <div class="col-md-3">
+          <label for="vendedor">Vendedor</label>
+          <input class="form-control" name="vendedor" type="text" id="vendedor" size="20">
+        </div>
+      </div>
+      <div class="container custom-container">
+        <h3><strong>Items</strong></h3>
+        <div id="items-container">
+          <div class="row no-gutters item-row">
+            <div class="col-md-3">
+              <label for="nome_item">Nome do item</label>
+              <input class="form-control" name="nome_item[]" type="text" size="20">
+            </div>
+            <div class="col-md-2">
+              <label for="codigo">Codigo</label>
+              <input class="form-control" name="codigo[]" type="text" size="20">
+            </div>
+            <div class="col-md-2">
+              <label for="quantidade">Quantidade</label>
+              <input class="form-control" name="quantidade[]" type="text" size="20">
+            </div>
+            <div class="col-md-2">
+              <label for="preco">Preço</label>
+              <input class="form-control" name="preco[]" type="text" size="20">
+            </div>
+            <div class="col-md-1">
+              <label for="desconto">Desconto(%)</label>
+              <input class="form-control" name="desconto[]" type="text" size="20">
+            </div>
+            <div class="col-md-1">
+              <label for="preco_total">Preço Total</label>
+              <input class="form-control" name="preco_total[]" type="text" size="20">
+            </div>
+            <div class="col-md-1">
+              <button type="button" class="btn btn-danger delete-item">Deletar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn-adicionar"> Adicionar item </button>
+        </div>
+      </div>
+    </div>
+    <div class="container custom-container ">
+      <h3><strong>Transportador</strong></h3>
+      <div class="row">
+        <div class="col-md-3">
+          <label for="frete_por_conta">Frete por conta</label>
+          <input class="form-control" name="frete_por_conta" type="text" id="frete_por_conta" size="40">
+        </div>
+        <div class="col-md-3">
+          <label for="largura">Largura</label>
+          <input class="form-control" name="largura" type="text" id="largura" size="40">
+        </div>
+        <div class="col-md-3">
+          <label for="comprimento">Comprimento</label>
+          <input class="form-control" name="comprimento" type="text" id="comprimento" size="20">
+        </div>
+        <div class="col-md-3">
+          <label for="altura">Altura</label>
+          <input class="form-control" name="altura" type="text" id="altura" size="20">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <label for="peso">Peso</label>
+          <input class="form-control" name="peso" type="text" id="peso" size="20">
+        </div>
+        <div class="col-md-3">
+          <label for="prazo_entrega">Prazo de entrega</label>
+          <input class="form-control" name="prazo_entrega" type="date" id="prazo_entrega" size="20">
+        </div>
+        <div class="col-md-3">
+          <label for="valor_frete">Valor do Frete</label>
+          <input class="form-control" name="valor_frete" type="text" id="valor_frete" size="20">
+        </div>
+      </div>
+    </div>
+    <div class="container custom-container ">
+      <h3><strong>Totais</strong></h3>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="num_itens">N° de Itens</label>
+          <input class="form-control" name="num_itens" type="text" id="num_itens" size="20">
+        </div>
+        <div class="col-md-4">
+          <label for="soma_quantidades">Soma das quantitades</label>
+          <input class="form-control" name="soma_quantidades" type="text" id="soma_quantidades" size="20">
+        </div>
+        <div class="col-md-4">
+          <label for="desconto">Desconto</label>
+          <input class="form-control" name="desconto" type="text" id="desconto" size="20">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="desc_total_venda">Desconto total da venda</label>
+          <input class="form-control"  name="desc_total_venda" type="text" id="desc_total_venda" size="20">
+        </div>
+        <div class="col-md-4">
+          <label for="total_itens">Total dos itens</label>
+          <input class="form-control" name="total_itens" type="text" id="total_itens" size="20">
+        </div>
+        <div class="col-md-4">
+          <label for="total_venda">Total da venda</label>
+          <input class="form-control" name="total_venda" type="text" id="total_venda" size="20">
+        </div>
+      </div>
+    </div>
+    <div class="container custom-container ">
+      <h3><strong>Pagamento</strong></h3>
+      <div class="row">
+        <div class="col-md-3">
+          <label for="cond_pagamento">Condições de pagamento</label>
+          <input class="form-control" name="cond_pagamento" type="text" id="cond_pagamento" size="65">
+        </div>
+        <div class="col-md-3">
+          <label for="categoria">Categoria</label>
+          <input class="form-control" name="categoria" type="text" id="categoria" size="50">
+        </div>
+      </div>
+    </div>
+    <div class="container custom-container ">
+      <h3><strong>Detalhes da venda</strong></h3>
+      <div class="row">
+        <div class="col-md-3">
+          <label for="data_venda">Data da venda</label>
+          <input class="form-control"  name="data_venda" type="date" id="data_venda" size="20">
+        </div>
+        <div class="col-md-3">
+          <label for="data_saida">Data Saída</label>
+          <input class="form-control"  name="data_saida" type="date" id="data_saida" size="20">
+        </div>
+        <div class="col-md-3">
+          <label for="data_prevista">Data prevista</label>
+          <input class="form-control"  name="data_prevista" type="date" id="data_prevista" size="20">
+        </div>
+      </div>
+    </div>
+    <div class="container custom-container ">
+
+    </div>
+    <button type="button" class="salvar">Salvar</button>
+  </form>
+  <script src="js_cad_venda.js"></script>
+</body>
+
+</html>

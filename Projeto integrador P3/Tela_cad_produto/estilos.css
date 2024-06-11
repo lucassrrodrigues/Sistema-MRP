@@ -1,0 +1,151 @@
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+.form-control:focus{ 
+    border-color: #58befa;
+    -webkit-box-shadow: none; 
+    box-shadow: none; 
+  }
+form h1 {
+    color: #58befa;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input[type="text"],
+select {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    display: none;
+}
+/* Estilizando o label do input file */
+.label-file {
+    position: relative; 
+    border-style: dashed;
+    border-width: 4px;
+    border-color: #58befa;
+    height: 200px;
+    width: 100%;
+    margin-top: 10px; 
+}
+.label-file::after {
+    content: "Arraste ou escolha arquivo";
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.custom-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+.label-imagem{
+    align-items: center;
+}
+.area-upload{
+	margin: 20px auto;
+	box-sizing: border-box;
+	width: 100%;
+	position: relative;
+}
+
+.area-upload label.label-upload{
+	border: 2px dashed #0d8acd;
+	min-height: 200px;
+	text-align: center;
+	width: 100%;
+	
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	color: #0d8acd;
+    border-width: 4px;
+	position: relative;
+	
+	-webkit-transition: .3s all;
+	-moz-transition: .3s all;
+	-o-transition: .3s all;
+	transition: .3s all;
+}
+
+.area-upload label.label-upload.highlight{
+	background-color: #fffdaa;
+}
+
+.area-upload label.label-upload *{
+	pointer-events: none;
+}
+
+.area-upload input{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	opacity: 0;
+}
+
+
+.area-upload .lista-uploads .barra{
+	background-color: #e6e6e6;
+	margin: 10px 0;
+	width: 100%;
+	position: relative;
+}
+
+.area-upload .lista-uploads .barra .fill{
+	background-color: #a1f7ff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	min-width: 0;
+	
+	-webkit-transition: .2s all;
+	-moz-transition: .2s all;
+	-o-transition: .2s all;
+	transition: .2s all;
+}
+
+.area-upload .lista-uploads .barra.complete .fill{
+	background-color: #bcffdf;
+}
+
+.area-upload .lista-uploads .barra .text{
+	z-index: 10;
+	text-align: center;
+	padding: 3px 5px;
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	color: black;
+	font-size: 12px;
+}
+.area-upload .lista-uploads .barra .text a{
+	color: black;
+	font-weight: bold;
+}
+
+.area-upload .lista-uploads .barra.error .fill{	
+	background-color: #c02929;
+	color: white;
+	min-width: 100%;
+}
+
+.area-upload .lista-uploads .barra.error .text{
+	color: white;
+}
+input:focus {
+    outline: none !important; /* Remover a sombra azul */
+}
+
+input:focus {
+    outline: none !important; /* Remover a sombra azul */
+}

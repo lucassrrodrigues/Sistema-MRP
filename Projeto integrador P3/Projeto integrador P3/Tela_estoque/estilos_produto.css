@@ -1,0 +1,62 @@
+#sidebar {
+    margin-top: 95px;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Inicialmente fora da tela */
+    width: 250px;
+    height: 100vh; /* 100% da altura da viewport */
+    background-color: #3FB5FA;
+    border-radius: 0px 7px;
+    transition: left 0.0s ease; /* Adicionando uma transição suave para a animação */
+}
+
+#sidebar.open {
+    left: 0; /* Mostra a barra lateral quando a classe 'open' é adicionada */
+}
+
+#sidebarClose {
+    margin-top: 5%;
+    margin-left: 55%;
+    background-color: #58befa;
+    border-radius: 7px;
+    border: 0;
+    color: #fff;
+    height: 40px; 
+    width: 40%;
+    font-size: 16px;
+    
+}
+
+#sidebarToggle {
+    background-image: url('../img/InconFiltro.png');
+    background-size: cover; 
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    background-color: #58befa;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0;
+    border-radius: 7px;
+    margin-left: 10px;
+    z-index: 9999;
+}
+
+.btn-cadastrar-produto {
+    padding: 8px;
+    position: fixed;
+    top: 110px;
+    right: 10px;
+    z-index: 9999;
+    background-color: #58befa;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+.title h1{
+    padding: 15px;
+    color: #3FB5FA;
+}
+
+

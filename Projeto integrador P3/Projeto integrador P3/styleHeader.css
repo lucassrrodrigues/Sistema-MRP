@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+}
+
+header {
+  background-color: #58befa;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 95px; /* Defina a altura desejada */
+}
+
+header img {
+  padding: 2.5px;
+  height: 55px;
+  width: auto;
+}
+
+header button {
+  color: #fff;
+  text-decoration: none;
+  background-color: #58befa;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+header nav {
+  margin-right: auto;
+  /* Isso empurra os links para a esquerda o máximo possível */
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #58befa;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content .dropdown-start:hover {
+  background-color: #f1f1f170;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.dropdown-content .dropdown-meio:hover {
+  background-color: #f1f1f170;
+}
+
+.dropdown-content .dropdown-end:hover {
+  background-color: #f1f1f170;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+nav {
+  display: flex;
+}
+
+.dropdown {
+  margin-right: 8px;
+}
+.perfil {
+  padding: 1.7px;
+  height: 37px;
+  width: auto;
+}

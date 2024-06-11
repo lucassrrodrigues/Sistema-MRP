@@ -1,0 +1,200 @@
+/* Reset de estilos */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #58BEFA; 
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    gap: 25px;
+    font-family: Montserrat; 
+}
+
+nav ul li a {
+    color: white; 
+    text-decoration: none;
+}
+
+/* Seção Herói */
+.hero {
+    display: flex; 
+    text-align: center;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 110px 20px;
+    background-image: url("../img/Fundo.png"); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: white; 
+}
+
+.hero h1 {
+    font-size: 85px;
+    margin: 0;
+    font-family: Montserrat;
+    height: 250px;
+}
+
+.hero p {
+    font-size: 20px;
+    font-family: Montserrat;
+}
+
+.hero button {
+    padding: 15px 25px;
+    background-color: #ffffff;
+    color: #58BEFA;
+    border: none;
+    cursor: pointer;
+    opacity: 10.0;
+    background-color: #f4f4f4;
+    border-radius: 30px;
+    font-size: 25px;
+    font-family: Montserrat;
+}
+
+.hero button:hover {
+    background-color: #4BA8E5; 
+}
+
+.hero-content {
+    text-align: left; 
+}
+
+.hero-image {
+    flex-shrink: 0; 
+    max-width: 500px; 
+}
+
+.hero-image img {
+    width: 100%; 
+}
+
+/* Seção Container */
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container img {
+    width: 500px; /* Definir largura da imagem */
+    margin-left: 80px;
+    margin-right: 35px; /* Espaço entre a imagem e o texto */
+}
+
+.container .texto {
+    font-size: 18px; /* Tamanho do texto */
+    color: #000000; /* Cor do texto */
+    padding: 70px 20px;
+    font-family: Montserrat;
+    width: 50%;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+/* Seção Retângulo */
+.retangulo {
+    background-color: #58BEFA; 
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+.retangulo h1 {
+    color: white;
+    font-size: 70px; 
+    margin: 20px; 
+    width: 100%; 
+    text-align: center; 
+}
+
+/* Quadrados de Funcionalidades */
+.square {
+    width: 450px;
+    height: 350px;
+    border: 2px solid white;
+    background-color: #58BEFA;
+    margin-right: 35px; 
+    justify-content: 0; 
+    align-items: center; 
+    border-radius: 40px;
+    margin: 50px;
+}
+
+.square img {
+    max-width: 80%; /* Ajuste o tamanho máximo da imagem conforme necessário */
+    max-height: 80%;
+    margin: auto; /* Centraliza a imagem horizontalmente */
+    display: block; /* Impede que a imagem quebre a linha */
+    margin-bottom: 20px;
+    margin-top: 20px; /* Diminui o espaçamento acima do texto */
+}
+
+h5 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    margin-top: 10px; /* Diminui o espaçamento acima do título */
+    margin-bottom: 5px; /* Diminui o espaçamento abaixo do título */
+    font-family: Montserrat; 
+}
+
+h6 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-top: 5px; /* Diminui o espaçamento acima do texto */
+    margin-bottom: 10px; /* Diminui o espaçamento abaixo do texto */
+    font-family: Montserrat; 
+}
+
+body {
+    margin: 0;
+}
+
+.container2 {
+    width: 100%; /* Largura total da tela */
+    display: flex;
+    align-items: center; /* Alinhar itens verticalmente */
+    justify-content: center; /* Centralizar o conteúdo horizontalmente */
+}
+
+.container2 .texto {
+    max-width: 50%; /* Largura máxima do texto */
+    text-align: right; /* Alinhar o texto à direita */
+    line-height: 1.2; /* Espaçamento entre linhas */
+    padding-right: 20px; /* Espaçamento à direita */
+}
+
+.container2 img {
+    max-width: 50%; /* Largura máxima da imagem */
+    margin-left: 80px; /* Espaço entre a imagem e o texto */
+}
+
+.container2 h2 {
+    font-size: 50px; /* Tamanho da fonte do título */
+    margin: 0; /* Remover margens padrão */
+    font: Montserrat; 
+    color: #58BEFA;
+}

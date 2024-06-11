@@ -1,0 +1,166 @@
+
+/* Cabeçalho */
+
+#sidebar {
+    margin-top: 95px;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Inicialmente fora da tela */
+    width: 250px;
+    height: 100vh; /* 100% da altura da viewport */
+    background-color: #3FB5FA;
+    border-radius: 0px 7px;
+    transition: left 0.0s ease; /* Adicionando uma transição suave para a animação */
+}
+
+#sidebar.open {
+    left: 0; /* Mostra a barra lateral quando a classe 'open' é adicionada */
+}
+
+#sidebarClose {
+    margin-top: 5%;
+    margin-left: 55%;
+    background-color: #58befa;
+    border-radius: 7px;
+    border: 0;
+    color: #fff;
+    height: 40px; 
+    width: 40%;
+    font-size: 16px;
+    
+}
+
+#sidebarToggle {
+    background-image: url('../img/InconFiltro.png');
+    background-size: cover; 
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    background-color: #58befa;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0;
+    border-radius: 7px;
+    margin-left: 10px;
+    z-index: 9999;
+}
+
+.btn-cadastrar-produto {
+    padding: 8px;
+    position: fixed;
+    top: 110px;
+    right: 10px;
+    z-index: 9999;
+    background-color: #58befa;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+.title h1{
+    padding: 15px;
+    color: #3FB5FA;
+}
+
+
+
+
+/* corpo */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.terms-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.terms-content {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 10px;
+}
+
+.terms-content p {
+    margin-bottom: 10px;
+}
+
+#terms-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#terms-form label {
+    margin-left: 5px;
+}
+
+#submit-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: not-allowed;
+}
+
+#submit-button:enabled {
+    cursor: pointer;
+    background-color: #0056b3;
+}
+
+/* Rodapé */
+footer {
+    background-color: #58BEFA;
+    padding: 10px;
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+}
+
+.rodape a {
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #58BEFA;
+}
+
+.rodape img {
+    width: 35px;
+    height: 35px;
+}
+
+.info {
+    text-align: center;
+    color: white;
+    font-family: Montserrat, sans-serif;
+}
+
+.info div {
+    margin: 5px 0;
+}
