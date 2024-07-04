@@ -7,8 +7,9 @@ Projeto desenvolvido para o Projeto Integrador da Faculdade.<br/>
 <br>
 
 <p align="center"
-  
-  ![VID-20240623-WA0012](https://github.com/lucassrrodrigues/lucassrrodrigues/assets/129055969/09809825-7316-4749-8a28-1d85342e5db7) 
+ 
+  ![VID-20240623-WA0012-ezgif com-video-to-gif-converter](https://github.com/lucassrrodrigues/Sistema-MRP/assets/129055969/ab94df42-f191-4750-a3d6-06abca747c6b)
+
 >
 
 ## 💻 Projeto
